@@ -178,6 +178,8 @@ body {
   padding-top: 30px;
 }
 .ratings .rating__title {
+  text-decoration: none;
+  display: block;
   font-size: 22px;
   font-weight: 300;
   padding-top: 20px;
@@ -185,6 +187,25 @@ body {
   color: white;
   text-transform: capitalize;
 }
+
+.ratings .rating__title i {
+  transform: rotate(180deg);
+  /* display: none; */
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+
+.ratings .rating__title:hover i{
+  /* display: block; */
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.ratings .rating__title:hover{
+  text-decoration: underline;
+}
+
+
+
 .ratings .rating__title.custom {
   padding-bottom: 0px;
   margin-bottom: 6px;
