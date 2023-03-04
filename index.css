@@ -585,7 +585,13 @@ body {
 }
 @media only screen and (max-width: 750px) {
   .banner {
-    height: 260px !important;
+   max-height: 260px !important;
+  }
+  .banner__right{
+    display: none;
+  }
+  .banner__left{
+   height: 100%;
   }
   .banner__left p.text__above {
     font-size: 30px;
