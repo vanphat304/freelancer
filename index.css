@@ -32,11 +32,9 @@ body {
 
 @keyframes fadeIn {
   from {
-    
     opacity: 0;
   }
   to {
-    
     opacity: 1;
   }
 }
@@ -47,7 +45,7 @@ body {
   }
   to {
     transform: scale(1);
-    
+
     opacity: 1;
   }
 }
@@ -60,7 +58,7 @@ body {
   to {
     transform: translateX(0);
     transform: translateY(20%);
-    
+
     opacity: 1;
   }
 }
@@ -113,7 +111,7 @@ body {
 }
 .banner {
   border-top: solid 1px white;
-  height: 500px;
+  min-height: 500px;
   background: linear-gradient(#03392c, #02561a);
 }
 
@@ -140,7 +138,6 @@ body {
   font-weight: 700;
   text-shadow: 5px 2px 2px green;
   animation: fadeInO ease-in 0.8s;
-
 }
 
 .banner__button {
@@ -163,7 +160,6 @@ body {
 .banner__right {
   transform: translate(20%, 20%);
   animation: leftToRight ease-in 0.8s;
-
 }
 .banner__right img:hover {
   cursor: pointer;
@@ -171,7 +167,6 @@ body {
   transform: scale(1.2);
   transition: all ease-in 0.5s;
   animation: fadeIn ease-in 0.2s;
-
 }
 
 .ratings {
@@ -195,16 +190,14 @@ body {
   transition: all ease-in 0.2s;
 }
 
-.ratings .rating__title:hover i{
+.ratings .rating__title:hover i {
   /* display: block; */
   opacity: 1;
   transform: rotate(0deg);
 }
-.ratings .rating__title:hover{
+.ratings .rating__title:hover {
   text-decoration: underline;
 }
-
-
 
 .ratings .rating__title.custom {
   padding-bottom: 0px;
@@ -269,10 +262,11 @@ body {
 .custom_row {
   margin: 24px 0;
 }
-.custom_row .item__service{
+.custom_row .item__service {
   margin: 12px 0;
 }
-.contact {
+.contact,
+.products {
   position: relative;
   background-image: url("./img/bg_banner.webp");
   background-position: center;
@@ -281,7 +275,7 @@ body {
   background-color: black;
   background-position: bottom;
   background-attachment: fixed;
-  height: 320px;
+  min-height: 320px;
 }
 
 .contact .overlay {
@@ -374,15 +368,18 @@ body {
   border: none;
 }
 
-.footer__logo a:last-child {
+.footer__logo a:nth-child(2) {
   background: orangered;
+}
+.footer__logo a:nth-child(3) {
+  background: #008fe9;
 }
 
 .footer__logo a img {
   width: 22px;
 }
 .footer__logo a i {
-  font-size: 22px ;
+  font-size: 22px;
 }
 
 .product__item {
@@ -391,7 +388,6 @@ body {
   overflow: hidden;
   border-radius: 10px;
   animation: fadeIn ease-in 0.8s;
-
 }
 .product__item img {
   border-top-left-radius: 10px;
@@ -404,6 +400,8 @@ body {
   margin: 10px 0 23px 0;
   font-weight: 500;
   border-left: solid;
+}
+.products {
 }
 
 .product__modal {
@@ -459,7 +457,7 @@ body {
   right: 0;
   bottom: 0;
   padding: 12px;
-  margin: 0 12px ;
+  margin: 0 12px;
   text-align: center;
   border: solid 1px #03392c;
   border-radius: 10px;
@@ -470,8 +468,75 @@ body {
   align-items: center;
   flex-direction: column;
   /* transition: fadeIn 0.5s ease; */
-  animation: fadeIn 0.4s ease-in ;
+  animation: fadeIn 0.4s ease-in;
   cursor: pointer;
+}
+
+.button__contact {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+  width: 500px;
+  background: transparent;
+  border: solid 1px white;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  margin: 10px 0;
+  transition: all ease-in 0.5ss;
+  animation: fadeInO ease-in 0.8s;
+}
+
+.button__contact:hover{
+  border-color: #03392c;
+}
+
+.button__contact:first-child:hover {
+  background-color: orangered;
+}
+.button__contact:first-child:hover span i {
+  transition: all ease 0.6s;
+  font-size: 40px;
+}
+
+.button__contact:nth-child(2):hover {
+  background-color: #000;
+}
+.button__contact:nth-child(2):hover span img {
+  transition: all ease 0.6s;
+  width: 40px;
+}
+.button__contact:nth-child(3):hover {
+  background-color: #008fe9;
+}
+.button__contact:nth-child(3):hover span img {
+  transition: all ease 0.6s;
+  width: 80px !important;
+}
+
+.button__contact span:first-child {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: orangered;
+  border-radius: 5px;
+}
+
+.button__contact span i {
+  color: white;
+}
+.button__contact span img {
+  width: 22px;
+}
+.button__contact span:nth-child(2) {
+  flex: 1;
+  font-size: 20px;
+  color: white;
+  text-align: center;
 }
 
 #btn-back-to-top {
@@ -484,6 +549,14 @@ body {
 @media only screen and (max-width: 1110px) {
   .banner__left p.text__above {
     font-size: 50px;
+  }
+  .button__contact{
+    width: 400px;
+    height: 50px;
+  }
+  .button__contact span:first-child {
+    width: 40px;
+    height: 40px;
   }
   .banner__left p.text__down {
     font-size: 30px;
@@ -499,6 +572,9 @@ body {
   .banner__left p.text__above {
     font-size: 40px;
     /* color: rebeccapurple; */
+  }
+  .button__contact{
+    width: 300px;
   }
   .banner__left p.text__down {
     font-size: 20px;
